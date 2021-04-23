@@ -1,0 +1,336 @@
+<link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+
+<!doctype html>
+    <html lang="en-gb" class="isie ie7 oldie no-js">
+    <html lang="en-gb" class="isie ie8 oldie no-js">
+ <html lang="en-gb" class="isie ie9 no-js">
+
+<html lang="en-gb" class="no-js">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!--[if lt IE 9]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <![endif]-->
+<title>AccuDiagnosis</title>
+<meta name="description" content="">
+<meta name="author" content="WebThemez">
+<!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<!--[if lte IE 8]>
+		<script type="text/javascript" src="http://explorercanvas.googlecode.com/svn/trunk/excanvas.js"></script>
+	<![endif]-->
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link href="css/animate.css" rel="stylesheet" media="screen">
+    <!--<link rel="stylesheet" href="css/styles.css" /-->
+<link href="static/font/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/isotope.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/font-awesome.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/animate.css') }}" rel="stylesheet">
+  <style type="text/css">
+    .personal{
+    background-image: url("https://drive.google.com/uc?export=view&id=1sBqT4tL97IzHyi9yDojtxTV375U-sMhn");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+    .custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+.btn-7 {
+  background: linear-gradient(0deg, rgba(255,151,0,1) 0%, rgba(251,75,2,1) 100%);
+    line-height: 42px;
+    padding: 0;
+    border: none;
+  }
+  .btn-7 span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .btn-7:before,
+  .btn-7:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    background: rgba(251,75,2,1);
+    box-shadow:
+     -7px -7px 20px 0px rgba(255,255,255,.9),
+     -4px -4px 5px 0px rgba(255,255,255,.9),
+     7px 7px 20px 0px rgba(0,0,0,.2),
+     4px 4px 5px 0px rgba(0,0,0,.3);
+    transition: all 0.3s ease;
+  }
+  .btn-7:before{
+     height: 0%;
+     width: 2px;
+  }
+  .btn-7:after {
+    width: 0%;
+    height: 2px;
+  }
+  .btn-7:hover{
+    color: rgba(251,75,2,1);
+    background: transparent;
+  }
+  .btn-7:hover:before {
+    height: 100%;
+  }
+  .btn-7:hover:after {
+    width: 100%;
+  }
+  .btn-7 span:before,
+  .btn-7 span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    background: rgba(251,75,2,1);
+    box-shadow:
+     -7px -7px 20px 0px rgba(255,255,255,.9),
+     -4px -4px 5px 0px rgba(255,255,255,.9),
+     7px 7px 20px 0px rgba(0,0,0,.2),
+     4px 4px 5px 0px rgba(0,0,0,.3);
+    transition: all 0.3s ease;
+  }
+  .btn-7 span:before {
+    width: 2px;
+    height: 0%;
+  }
+  .btn-7 span:after {
+    height: 2px;
+    width: 0%;
+  }
+  .btn-7 span:hover:before {
+    height: 100%;
+  }
+  .btn-7 span:hover:after {
+    width: 100%;
+  }
+  .btnpersonal {
+  border: 2px solid gray;
+  color: gray;
+  background-color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.numberCircle {
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+    width: 50px;
+    height: 50px;
+    padding: 8px;
+    background: #fff;
+    border: 2px solid black;
+    color: black;
+    text-align: center;
+    font: 32px Arial, sans-serif;
+    display: inline-block;
+}
+  </style>
+
+</head>
+
+<body>
+<nav id="mainNav">
+  <div id="menuToggle"><i class="fa fa-bars"></i></div>
+  <ul class="menuLinks">
+    <li class="active" id="firstLink"><a href="#home" class="scroll-link">Home</a></li>
+    <li><a href="#services" class="scroll-link">Services</a></li>
+    <li><a href="#aboutUs" class="scroll-link">About Us</a></li>
+    <li><a href="#contactUs" class="scroll-link">Contact Us</a></li>
+  </ul>
+</nav>
+<!--/.header-->
+<div id="#top"></div>
+<section class="personal" id="home">
+  <div class="banner-container">
+    <div class="container">
+      <div class="row">
+        <div class="logo"> </div>
+      </div>
+      <div class="heading text-center">
+        <h2>AccuDiagnosis</h2>
+        <strong></strong> </div>
+      <div class="countdown styled"></div>
+    </div>
+  </div>
+</section>
+<section id="services" class="page-section colord">
+  <div class="container">
+    <div class="row">
+      <!-- item -->
+      <div class="col-md-3 text-center"> <div class="numberCircle">1</div>
+        <h3>Select <span class="id-color">Model</span></h3>
+
+      </div>
+      <!-- end: -->
+
+      <!-- item -->
+      <div class="col-md-3 text-center"> <div class="numberCircle">2</div>
+        <h3>Upload <span class="id-color">Image</span></h3>
+
+      </div>
+      <!-- end: -->
+
+      <!-- item -->
+      <div class="col-md-3 text-center"> <div class="numberCircle">3</div>
+        <h3>Submit <span class="id-color">!</span></h3>
+
+      </div>
+      <!-- end: -->
+
+      <!-- item -->
+      <div class="col-md-3 text-center"> <div class="numberCircle">4</div>
+        <h3>Get <span class="id-color">Diagnosis</span></h3>
+
+      </div>
+      <!-- end:-->
+    </div>
+  </div>
+  <!--/.container-->
+</section>
+<section id="aboutUs">
+  <div class="container">
+    <div class="row feature design">
+      <div class="six columns left">
+        <h2>Our Company</h2>
+        <p>AccuDiagnosis is a platform where users can upload theri medical images/scans like OCT scans, X-rays, CT scans and
+        get approriate results which show if they are diagnosed with any diseases. We make use of Deep Learning algorithms and apply them to the
+        uploaded image to get accurate diagnosis</p>
+        <p>AccuDiagnosis provides facilities to detect Pneumonia, Breast Cancer, Colorectal Cancer, Skin cancers lik Melanoma, Melanocytic levi
+        and other skin lesions and macular edema</p>
+      </div>
+      <div class="six columns feature-media right"> <img src="images/picture-136.png" alt="">
+      <form id="upload-file" method="post" action="/predict" enctype="multipart/form-data">
+        <label for="imageUpload" class="upload-label">
+            Choose Model
+        </label>
+        <select id="District" name="a" class="form-control  col-xs-3 col-sm-3 col-md-3 d-inline-block m-1">
+                        <option selected="" value="" disabled selected>Select Model</option>
+                        <option value="0">Pneumonia</option>
+                        <option value="1">Breast</option>
+                        <option value="2">Derma</option>
+                        <option value="3">Path</option>
+                        <option value="4">Oct</option>
+        </select>
+        <br><br>
+        <label for="imageUpload" class="upload-label">
+            Choose Image
+        </label>
+         <input class="btnpersonal" type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+        <br><br>
+    <button class= " custom-btn btn-7" type="submit" >Predict</button>
+    </form>
+    <h2>{{prediction_text}}</h2>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="contactUs" class="contact-parlex" align="center">
+<div class="parlex-back">
+    <div class="container">
+      <div class="col-10 mx-auto text-center mt-5 ">
+        <h1>Team</h1>
+        <div class="row ">
+
+
+ <div class="col-xs-2 col-sm-6 col-md-6" data-aos="fade-up" data-aos-delay="">
+            <div class="team-member">
+              <figure>
+
+                <img src="https://drive.google.com/uc?id=1t3z-SBynWwAANWIALtqGrPi79ZaauVPz" alt="Name" style="width: 225px;" class="img-fluid" >
+              </figure>
+              <div class="p-3">
+                <h3>Kaivel Patel</h3>
+                <span class="position">18DCS071</span>
+                  <span class="position"><a href="mailto:18dcs071@charusat.edu.in">Contact me</a></span>
+              </div>
+            </div>
+          </div>
+
+ <div class="col-xs-2 col-sm-6 col-md-6" data-aos="fade-up" data-aos-delay="">
+            <div class="team-member">
+              <figure>
+
+                <img src="https://drive.google.com/uc?id=1ut4P9o6WMR8MEzGXrmzZRoAtpCQK0oM9" alt="Name" style="width: 225px;" class="img-fluid" >
+              </figure>
+              <div class="p-3">
+                <h3>Bhavya Ramani</h3>
+                <span class="position">18DCS097</span>
+                  <span class="position"><a href="mailto:18dcs097@charusat.edu.in">Contact me</a></span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+          </div>
+
+    </div>
+    <!--/.container-->
+  </div>
+</section>
+<footer>
+<div class="container">
+    <div class="social text-center"> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-dribbble"></i></a> <a href="#"><i class="fa fa-flickr"></i></a> <a href="#"><i class="fa fa-github"></i></a> </div>
+    <div class="clear"></div>
+    <!--CLEAR FLOATS-->
+  </div>
+</footer>
+<!--/.page-section-->
+<section class="copyright">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center"> AccuDiagnosis | All Rights Reserved by 18DCS071 18DCS097 </div>
+    </div>
+    <!-- / .row -->
+  </div>
+</section>
+<a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a>
+
+<!--[if lte IE 8]><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><![endif]-->
+<script src="js/modernizr-latest.js"></script>
+<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/jquery.nav.js" type="text/javascript"></script>
+<script src="js/waypoints.js"></script>
+<script src="js/backstretch.js" type="text/javascript"></script>
+<script src="js/custom.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery.countdown.js"></script>
+<script src="{{ url_for('static', filename='js/backstrech.js') }}" type="text/javascript"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}" type="text/javascript"></script>
+<script src="{{ url_for('static', filename='js/custom.js') }}" type="text/javascript"></script>
+<script src="{{ url_for('static', filename='js/jquery.countdown.js') }}" type="text/javascript"></script>
+<script src="{{ url_for('static', filename='js/jquery.fittext.js') }}" type="text/javascript"></script>
+<script src="{{ url_for('static', filename='js/jquery.nav.js') }}" type="text/javascript"></script>
+<script src="{{ url_for('static', filename='js/jquery-1.8.2.min.js') }}" type="text/javascript"></script>
+<script src="{{ url_for('static', filename='js/modernizer-latest.js') }}" type="text/javascript"></script>
+<script src="{{ url_for('static', filename='js/waypoints.js') }}" type="text/javascript"></script>
+
+</body>
+</html>
